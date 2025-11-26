@@ -1,4 +1,4 @@
-import styled,  { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
 export const Item = styled.div`
    width: 50%;
@@ -21,8 +21,8 @@ export const Item = styled.div`
 
 export const SettingsContainer = styled.div`
    ${({ theme }) =>
-      theme &&
-      css`
+			theme &&
+			css`
          background-color: ${theme.quinaryColor};
          box-shadow: ${theme.shadowBox};
          color: ${theme.tertiaryColor};

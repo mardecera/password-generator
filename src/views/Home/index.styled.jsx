@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
 const HomeElement = styled.div`
    ${({ theme }) =>
-      theme &&
-      css`
+			theme &&
+			css`
          width: 100vw;
          height: 100%;
          display: flex;

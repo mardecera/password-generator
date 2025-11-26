@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
 const SelectThemeContainer = styled.div`
    ${({ theme }) =>
-      theme &&
-      css`
+			theme &&
+			css`
          align-items: center;
          box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.404);
          border-radius: 200px;

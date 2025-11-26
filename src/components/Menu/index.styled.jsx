@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
 const MenuButton = styled.div`
    ${({ theme }) =>
-      theme &&
-      css`
+			theme &&
+			css`
          border-radius: 0.3rem;
          position: absolute;
          left: 1rem;
@@ -31,8 +31,8 @@ const MenuButton = styled.div`
 
 const MenuElement = styled.div`
    ${({ theme }) =>
-      theme &&
-      css`
+			theme &&
+			css`
          position: absolute;
          top: 0;
          left: 0;

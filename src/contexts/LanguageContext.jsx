@@ -1,20 +1,19 @@
-import { useState } from 'react'
-import { createContext } from 'react'
-import { languages } from '../consts'
+import { createContext, useState } from "react"
+import { languages } from "../consts"
 
 export const LanguageContext = createContext()
 
 export const LanguageProvider = ({ children }) => {
-   const [language, setLanguage] = useState(languages.english)
+	const [language, setLanguage] = useState(languages.english)
 
-   const handleLanguage = () => {
-      const newLanguage = language.name === 'spanish' ? 'english' : 'spanish'
-      setLanguage(languages[newLanguage])
-   }
+	const handleLanguage = () => {
+		const newLanguage = language.name === "spanish" ? "english" : "spanish"
+		setLanguage(languages[newLanguage])
+	}
 
-   return (
-      <LanguageContext.Provider value={[language, handleLanguage]}>
-         {children}
-      </LanguageContext.Provider>
-   )
+	return (
+		<LanguageContext.Provider value={[language, handleLanguage]}>
+			{children}
+		</LanguageContext.Provider>
+	)
 }

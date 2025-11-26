@@ -1,19 +1,19 @@
 .left {
-  transform: translateX(0%);
+	transform: translateX(0%);
 }
 
 .right {
-  transform: translateX(130%);
+	transform: translateX(130%);
 }
 
 .hidden {
-  display: block;
-  visibility: hidden;
+	display: block;
+	visibility: hidden;
 }
 
 .nameTheme {
-  width: max-content;
-  height: 1rem;
-  padding: 0rem .5rem;
-  font-size: 12px;
+	width: max-content;
+	height: 1rem;
+	padding: 0rem 0.5rem;
+	font-size: 12px;
 }

@@ -1,59 +1,61 @@
 .container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
 }
 
 .container .contain {
-  width: Min(80%, 500px);
-  height: max-content;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-  text-align: center;
-  color: #32325d;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(50px);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	width: Min(80%, 500px);
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	justify-content: center;
+	text-align: center;
+	color: #32325d;
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(50px);
+	padding: 2rem;
+	border-radius: 0.5rem;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media (max-width: 1440px) {
-  .container .contain img {
-    width: 100%;
-    margin: 0 auto;
-  }
+	.container .contain img {
+		width: 100%;
+		margin: 0 auto;
+	}
 }
 
 .container .contain .goToHome {
-  text-decoration: none;
-  margin: 0 auto;
-  width: max-content;
-  font-size: 14px;
-  padding: 1em 2em;
-  border-radius: 2rem;
-  border: none;
-  outline: #ff725e;
-  color: #ff725e;
-  box-shadow: inset 5px 5px 20px rgba(136, 136, 136, 0.479);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+	text-decoration: none;
+	margin: 0 auto;
+	width: max-content;
+	font-size: 14px;
+	padding: 1em 2em;
+	border-radius: 2rem;
+	border: none;
+	outline: #ff725e;
+	color: #ff725e;
+	box-shadow: inset 5px 5px 20px rgba(136, 136, 136, 0.479);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
 .container .contain .goToHome img {
-  width: 20px;
-  height: 20px;
+	width: 20px;
+	height: 20px;
 }
 
 .container .contain .goToHome:hover {
-  background-color: #ff725e;
-  color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	background-color: #ff725e;
+	color: white;
+	box-shadow:
+		rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }

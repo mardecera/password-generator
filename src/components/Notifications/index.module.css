@@ -1,58 +1,57 @@
 .notifications {
-  color: white;
-  border-radius: 0.3rem;
-  width: max-content;
-  max-width: 100%;
-  height: max-content;
-  font-size: 0.8em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 2rem;
-  transition: top 0.3s ease;
-  pointer-events: none;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: all .3s ease;
+	color: white;
+	border-radius: 0.3rem;
+	width: max-content;
+	max-width: 100%;
+	height: max-content;
+	font-size: 0.8em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 2rem;
+	pointer-events: none;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 426px) {
-  .notifications {
-    right: inherit;
-    max-width: 80%;
-  }
+	.notifications {
+		right: inherit;
+		max-width: 80%;
+	}
 }
 
 .notification {
-  background-color: aliceblue;
-  color: black;
-  box-shadow: 5px 5px 30px rgba(105, 108, 114, 0.6);
-  padding: 1rem;
-  border-radius: 0.3em;
-  width: max-content;
-  max-width: 100%;
-  transition: all .3s ease;
-  transform: translateX(-150%);
-  animation: move 8s ease-in-out;
+	background-color: aliceblue;
+	color: black;
+	box-shadow: 5px 5px 30px rgba(105, 108, 114, 0.6);
+	padding: 1rem;
+	border-radius: 0.3em;
+	width: max-content;
+	max-width: 100%;
+	transition: all 0.3s ease;
+	transform: translateX(-150%);
+	animation: move 8s ease-in-out;
 }
 
 @keyframes move {
-  0% {
-    transform: translateX(-150%);
-  }
-  10% {
-    transform: translateX(0%);
-  }
-  90% {
-    transform: translateX(0%);
-  }
-  99% {
-    transform: translateX(-150%);
-  }
+	0% {
+		transform: translateX(-150%);
+	}
+	10% {
+		transform: translateX(0%);
+	}
+	90% {
+		transform: translateX(0%);
+	}
+	99% {
+		transform: translateX(-150%);
+	}
 }
 
 .displayNone {
-  display: none;
+	display: none;
 }

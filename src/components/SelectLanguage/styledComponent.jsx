@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const ButtonCancel = styled.button`
    border-radius: 0.3rem;

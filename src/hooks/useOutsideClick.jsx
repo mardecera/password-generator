@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
+import { useEffect, useState } from "react"
 
 const useClickedOutside = (ref) => {
-   const [state, setState] = useState(true)
-   useEffect(() => {
-      function clickedOutside(event) {
-         setState(!ref.current.contains(event.target))
-      }
+	const [state, setState] = useState(true)
+	useEffect(() => {
+		function clickedOutside(event) {
+			setState(!ref.current.contains(event.target))
+		}
 
-      document.addEventListener('click', clickedOutside)
+		document.addEventListener("click", clickedOutside)
 
-      return () => document.removeEventListener('click', clickedOutside)
-   }, [ref])
+		return () => document.removeEventListener("click", clickedOutside)
+	}, [ref])
 
-   return state
+	return state
 }
 
 export default useClickedOutside

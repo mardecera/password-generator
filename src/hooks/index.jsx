@@ -1,3 +1,3 @@
-import useClickedOutside from './useOutsideClick'
+import useClickedOutside from "./useOutsideClick"
 
 export { useClickedOutside }
