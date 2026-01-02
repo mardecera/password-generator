@@ -1,0 +1,12 @@
+{
+	"editor.formatOnSave": true,
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonl]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}
