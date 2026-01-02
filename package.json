@@ -13,7 +13,7 @@
 		"build:prod:android": "pnpm run --filter=mobile build:prod:android",
 		"format": "prettier --write .",
 		"lint": "eslint . && stylelint **/*.{css,scss} --fix",
-		"clean": "clean:node_modules && clean:turbo && clean:build",
+		"clean": "pnpm clean:node_modules & pnpm clean:turbo & pnpm clean:build",
 		"clean:turbo": "rm -rf .turbo",
 		"clean:build": "rm -rf apps/mobile/.expo && rm -rf apps/web/.next",
 		"clean:node_modules": "rm -rf node_modules && rm -rf apps/**/node_modules",
