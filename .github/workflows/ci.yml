@@ -62,7 +62,7 @@ jobs:
         run: pnpm format
 
   # =======================
-  # 3. BUILD
+  # 3. CHECK TYPES
   # =======================
   check-types:
     name: Check Types
@@ -85,10 +85,10 @@ jobs:
         run: pnpm install --no-frozen-lockfile -w
 
       - name: Check types
-        run: pnpm check-types
+        run: pnpm --filter=web check-types
 
   # =======================
-  # 3. BUILD
+  # 4. BUILD
   # =======================
   build:
     name: Build Apps
