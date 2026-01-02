@@ -1,3 +1,8 @@
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
+packages:
+  - apps/*
+  - packages/*
+
+nodeLinker: isolated
+
+onlyBuiltDependencies:
+  - sharp
