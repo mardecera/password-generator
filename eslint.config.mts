@@ -44,14 +44,17 @@ export default defineConfig([
 			'apps/mobile/**/*.{ts,tsx}',
 			'packages/**/*.{ts,tsx}',
 		],
-		plugins: {
-			react: pluginReact,
-		},
-		extends: [pluginReact.configs.flat.recommended],
+		...pluginReact.configs.flat.recommended,
 		settings: {
 			react: {
 				version: 'detect',
 			},
+		},
+	},
+	{
+		files: ['apps/mobile/**/*.{ts,tsx,js,jsx}'],
+		rules: {
+			'@typescript-eslint/no-require-imports': 'off',
 		},
 	},
 	{

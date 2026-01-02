@@ -11,6 +11,7 @@
 	],
 	"sideEffects": false,
 	"scripts": {
-		"build": "rollup -c"
+		"build": "rollup -c",
+		"check-types": "tsc --noEmit"
 	}
 }
