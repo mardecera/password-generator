@@ -55,7 +55,7 @@ jobs:
   check-types:
     name: Check Types
     runs-on: ubuntu-latest
-    needs: lint
+    needs: [lint, format]
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -76,9 +76,9 @@ jobs:
   # 4. BUILD
   # =======================
   build:
-    name: Build Apps
+    name: Build Web
     runs-on: ubuntu-latest
-    needs: [lint, format]
+    needs: [lint, format, check-types]
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
