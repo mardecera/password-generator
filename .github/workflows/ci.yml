@@ -89,5 +89,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile -w
 
+      - name: Install web dependencies
+        run: pnpm --filter=web install
+
       - name: Build web app
         run: pnpm web:build
