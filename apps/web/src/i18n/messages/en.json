@@ -1,5 +1,8 @@
 {
 	"HomePage": {
 		"welcome": "Welcome 👋"
+	},
+	"Maintenance": {
+		"title": "Under maintenance"
 	}
 }

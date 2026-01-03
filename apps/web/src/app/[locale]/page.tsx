@@ -3,7 +3,11 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 
-const HomePage = async ({ params }: PageProps<'/[locale]'>) => {
+type PageProps = {
+	params: Promise<{ locale: string }>
+}
+
+const HomePage = async ({ params }: PageProps) => {
 	const { locale } = await params
 
 	if (!hasLocale(routing.locales, locale)) {

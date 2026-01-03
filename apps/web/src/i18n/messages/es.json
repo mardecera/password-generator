@@ -1,5 +1,8 @@
 {
 	"HomePage": {
 		"welcome": "Bienvenido 🎉"
+	},
+	"Maintenance": {
+		"title": "En mantenimiento"
 	}
 }
