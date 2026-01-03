@@ -5,5 +5,7 @@ packages:
 nodeLinker: isolated
 
 onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@swc/core'
   - lefthook
   - sharp
