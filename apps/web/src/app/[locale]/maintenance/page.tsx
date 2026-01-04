@@ -2,12 +2,13 @@ import { hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
+import Button from '@/components/ui/Button/Button'
 
 type PageProps = {
 	params: Promise<{ locale: string }>
 }
 
-const HomePage = async ({ params }: PageProps) => {
+const Page = async ({ params }: PageProps) => {
 	const { locale } = await params
 
 	if (!hasLocale(routing.locales, locale)) {
@@ -16,9 +17,14 @@ const HomePage = async ({ params }: PageProps) => {
 
 	setRequestLocale(locale)
 
-	const t = await getTranslations('HomePage')
+	const t = await getTranslations('Maintenance')
 
-	return <h1>{t('welcome')}</h1>
+	return (
+		<div>
+			<h1>{t('title')}</h1>
+			<Button />
+		</div>
+	)
 }
 
-export default HomePage
+export default Page

@@ -4,6 +4,8 @@ import { routing } from '@/i18n/routing'
 import { hasLocale } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import '@/app/globals.css'
+import Header from '@/components/global/Header/Header'
+import Footer from '@/components/global/Footer/Footer'
 
 type LayoutProps = {
 	children: React.ReactNode
@@ -29,9 +31,13 @@ const Layout = async ({ children, params }: LayoutProps) => {
 
 	return (
 		<html lang={locale}>
-			<body>
+			<body className="min-h-dvh flex flex-col bg-gray-950">
 				<NextIntlClientProvider locale={locale} messages={messages}>
-					{children}
+					<div className="wrapper flex-1 grid-rows-[auto_1fr_auto]">
+						<Header className="full-bleed" />
+						<main className="px-4">{children}</main>
+						<Footer className="full-bleed" />
+					</div>
 				</NextIntlClientProvider>
 			</body>
 		</html>
