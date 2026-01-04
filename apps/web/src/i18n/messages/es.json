@@ -1,8 +1,24 @@
 {
-	"HomePage": {
-		"welcome": "Bienvenido 🎉"
+	"home": {
+		"title": "Fuerte. Seguro. Increíble. Prueba nuestro generador de contraseñas aleatorias.",
+		"subtitle": "Un generador poderoso para contraseñas poderosas para proteger tus cuentas en línea.",
+		"generator": {
+			"title": "Escoge tu tipo de password",
+			"subtitle": "Personaliza tu nueva contraseña",
+			"tabs": {
+				"random": "Random",
+				"memorable": "Memorable",
+				"pin": "Pin"
+			}
+		}
 	},
 	"Maintenance": {
 		"title": "En mantenimiento"
+	},
+	"Components": {
+		"localeSwitcher": {
+			"en": "Ingles",
+			"es": "Español"
+		}
 	}
 }

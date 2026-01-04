@@ -1,8 +1,24 @@
 {
-	"HomePage": {
-		"welcome": "Welcome 👋"
+	"home": {
+		"title": "Strong. Secure. Awesome. Try our random password generator.",
+		"subtitle": "A powerful generator for powerful passwords to protect your online accounts.",
+		"generator": {
+			"title": "Choose password type",
+			"subtitle": "Customize your new password",
+			"tabs": {
+				"random": "Random",
+				"memorable": "Memorable",
+				"pin": "Pin"
+			}
+		}
 	},
 	"Maintenance": {
 		"title": "Under maintenance"
+	},
+	"Components": {
+		"localeSwitcher": {
+			"en": "English",
+			"es": "Spanish"
+		}
 	}
 }

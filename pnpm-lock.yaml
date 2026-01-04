@@ -6,6 +6,10 @@ settings:
 
 importers:
   .:
+    dependencies:
+      tailwind-merge:
+        specifier: ^3.4.0
+        version: 3.4.0
     devDependencies:
       '@eslint/css':
         specifier: 0.14.1
@@ -8657,6 +8661,12 @@ packages:
       }
     engines: { node: '>=10.0.0' }
 
+  tailwind-merge@3.4.0:
+    resolution:
+      {
+        integrity: sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g==,
+      }
+
   tailwindcss@4.1.18:
     resolution:
       {
@@ -15474,6 +15484,8 @@ snapshots:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
+
+  tailwind-merge@3.4.0: {}
 
   tailwindcss@4.1.18: {}
 
