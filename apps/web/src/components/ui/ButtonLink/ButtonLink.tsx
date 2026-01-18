@@ -1,18 +1,19 @@
 'use client'
 
 import { twMerge } from 'tailwind-merge'
-import { ButtonProps } from './Button.types'
-import { states, variants } from './Button.helpers'
+import { states, variants } from './ButtonLink.helpers'
+import { ButtonLinkProps } from './ButtonLink.types'
+import Link from 'next/link'
 
-const Button = (props: ButtonProps) => {
+const ButtonLink = (props: ButtonLinkProps) => {
 	const { className, children, icon, iconPosition = 'left', ...rest } = props
 	const { iconClassName, childrenClassName, ...restTwo } = rest
 	const { variant = 'solid', ...restThree } = restTwo
 
 	return (
-		<button
+		<Link
 			className={twMerge(
-				'rounded-lg py-3 px-4 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 flex items-center justify-center gap-2',
+				'rounded-lg py-3 px-4 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 flex items-center justify-center gap-2 w-fit',
 				variants[variant],
 				states[variant],
 				className
@@ -26,8 +27,8 @@ const Button = (props: ButtonProps) => {
 			<span className={iconClassName}>
 				{icon && iconPosition === 'right' && icon}
 			</span>
-		</button>
+		</Link>
 	)
 }
 
-export default Button
+export default ButtonLink

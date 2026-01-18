@@ -1,16 +1,12 @@
-'use client'
-
-import { useState } from 'react'
 import { TabsProps } from './Tabs.types'
 import { twMerge } from 'tailwind-merge'
 
 const Tabs = (props: TabsProps) => {
-	const { tabs, className, tabsClassName, contentClassName, children } = props
-
-	const [activeTab, setActiveTab] = useState(tabs[0].key)
+	const { tabs, className, tabsClassName, contentClassName, ...rest } = props
+	const { children, activeTab, onTabClick } = rest
 
 	const handleTabClick = (key: string) => {
-		setActiveTab(key)
+		onTabClick?.(key)
 	}
 
 	return (
@@ -36,7 +32,19 @@ const Tabs = (props: TabsProps) => {
 			</div>
 			{children}
 			<div className={twMerge(contentClassName)}>
-				{tabs.find((tab) => tab.key === activeTab)?.content}
+				{tabs.map((tab) => {
+					return (
+						<div
+							key={tab.key}
+							className={twMerge(
+								'flex flex-col justify-center items-center',
+								activeTab === tab.key ? 'block' : 'hidden'
+							)}
+						>
+							{tab.content}
+						</div>
+					)
+				})}
 			</div>
 		</div>
 	)

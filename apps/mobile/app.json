@@ -3,6 +3,7 @@
 		"name": "mobile",
 		"slug": "mobile",
 		"version": "1.0.0",
+		"jsEngine": "hermes",
 		"orientation": "portrait",
 		"icon": "./src/assets/images/icon.png",
 		"scheme": "passfe",

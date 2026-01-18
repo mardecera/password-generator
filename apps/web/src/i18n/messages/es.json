@@ -3,12 +3,21 @@
 		"title": "Fuerte. Seguro. Increíble. Prueba nuestro generador de contraseñas aleatorias.",
 		"subtitle": "Un generador poderoso para contraseñas poderosas para proteger tus cuentas en línea.",
 		"generator": {
-			"title": "Escoge tu tipo de password",
+			"title": "Escoge tu tipo de contraseña",
 			"subtitle": "Personaliza tu nueva contraseña",
 			"tabs": {
-				"random": "Random",
-				"memorable": "Memorable",
-				"pin": "Pin"
+				"random": {
+					"title": "Aleatoria",
+					"length": "Longitud",
+					"numbers": "Números",
+					"specialChars": "Símbolos",
+					"result": "Contraseña generada",
+					"buttonCopy": "Copiar contraseña",
+					"buttonCopied": "Copiado!",
+					"buttonGenerate": "Refrescar contraseña"
+				},
+				"memorable": "Fácil de recordar",
+				"pin": "PIN"
 			}
 		}
 	},
@@ -20,5 +29,10 @@
 			"en": "Ingles",
 			"es": "Español"
 		}
+	},
+	"notFound": {
+		"title": "404",
+		"subtitle": "Página no encontrada",
+		"description": "Lo sentimos, la página que buscas no existe."
 	}
 }

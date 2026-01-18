@@ -8,6 +8,14 @@ type PageProps = {
 	params: Promise<{ locale: string }>
 }
 
+export const generateMetadata = async () => {
+	const t = await getTranslations('Maintenance')
+
+	return {
+		title: t('title'),
+	}
+}
+
 const Page = async ({ params }: PageProps) => {
 	const { locale } = await params
 
@@ -22,7 +30,7 @@ const Page = async ({ params }: PageProps) => {
 	return (
 		<div>
 			<h1>{t('title')}</h1>
-			<Button />
+			<Button>Button</Button>
 		</div>
 	)
 }

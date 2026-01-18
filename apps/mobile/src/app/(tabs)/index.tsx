@@ -1,13 +1,29 @@
 import { Image } from 'expo-image'
-import { Platform, StyleSheet } from 'react-native'
+import { FlatList, Platform, StyleSheet } from 'react-native'
 
 import { HelloWave } from '@/src/components/hello-wave'
 import ParallaxScrollView from '@/src/components/parallax-scroll-view'
 import { ThemedText } from '@/src/components/themed-text'
 import { ThemedView } from '@/src/components/themed-view'
 import { Link } from 'expo-router'
+import { useEffect, useState } from 'react'
+
+const URL = 'https://api.thecatapi.com/v1/images/search?limit=10'
 
 export default function HomeScreen() {
+	const [data, setData] = useState()
+
+	useEffect(() => {
+		const request = async () => {
+			const response = await fetch(URL)
+			const data = await response.json()
+
+			setData(data)
+		}
+
+		request()
+	}, [])
+
 	return (
 		<ParallaxScrollView
 			headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -22,6 +38,17 @@ export default function HomeScreen() {
 				<ThemedText type="title">Welcome!</ThemedText>
 				<HelloWave />
 			</ThemedView>
+			<FlatList
+				data={data}
+				horizontal
+				keyExtractor={(item) => item.id}
+				renderItem={({ item }) => (
+					<Image
+						source={{ uri: item.url }}
+						style={{ width: 100, height: 100 }}
+					/>
+				)}
+			/>
 			<ThemedView style={styles.stepContainer}>
 				<ThemedText type="subtitle">Step 1: Try it</ThemedText>
 				<ThemedText>
