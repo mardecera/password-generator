@@ -10,4 +10,6 @@ export type TabsProps = {
 	tabsClassName?: string
 	contentClassName?: string
 	children?: React.ReactNode
+	activeTab?: string
+	onTabClick?: (key: string) => void
 }

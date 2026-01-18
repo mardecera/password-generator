@@ -11,6 +11,9 @@ type LayoutProps = {
 	children: React.ReactNode
 	params: Promise<{ locale: string }>
 }
+export const metadata = {
+	title: 'Passfe',
+}
 
 export const generateStaticParams = () => {
 	return routing.locales.map((locale) => ({ locale }))
@@ -31,12 +34,14 @@ const Layout = async ({ children, params }: LayoutProps) => {
 
 	return (
 		<html lang={locale}>
-			<body className="min-h-dvh flex flex-col bg-gray-950">
+			<body className="min-h-dvh flex flex-col bg-gray-900">
 				<NextIntlClientProvider locale={locale} messages={messages}>
-					<div className="wrapper flex-1 grid-rows-[auto_1fr_auto]">
-						<Header className="full-bleed" />
-						<main className="px-4">{children}</main>
-						<Footer className="full-bleed" />
+					<div className="flex-1 flex flex-col">
+						<Header />
+						<main className="wrapper px-4 flex-1 bg-gray-950 rounded-b-xl">
+							{children}
+						</main>
+						<Footer />
 					</div>
 				</NextIntlClientProvider>
 			</body>

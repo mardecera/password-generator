@@ -30,6 +30,31 @@
 }
 
 @layer utilities {
+	/* BASE */
+	.bg-black {
+		background-color: var(--black);
+	}
+
+	.text-black {
+		color: var(--black);
+	}
+
+	.border-black {
+		color: var(--black);
+	}
+
+	.bg-white {
+		background-color: var(--white);
+	}
+
+	.text-white {
+		color: var(--white);
+	}
+
+	.color-white {
+		color: var(--white);
+	}
+
 	/* MALICHITE */
 
 	.bg-mali-50 {
