@@ -23,19 +23,29 @@ const RandomTab = () => {
 	const [copied, setCopied] = useState<boolean>(false)
 
 	const handleGeneratePassword = () => {
-		let password = ''
-		const numbers = withNumbers ? NUMBERS : ''
-		const specialChars = withSpecialChars ? SPECIAL_CHARS : ''
-		const uppercase = UPPERCASE
-		const lowercase = LOWERCASE
-		const charset = numbers + specialChars + uppercase + lowercase
+		const charsets: string[] = [UPPERCASE, LOWERCASE]
+		if (withNumbers) charsets.push(NUMBERS)
+		if (withSpecialChars) charsets.push(SPECIAL_CHARS)
 
-		for (let i = 0; i < length; i++) {
-			const randomIndex = Math.floor(Math.random() * charset.length)
-			password += charset.charAt(randomIndex)
+		const charsPerSet = Math.floor(length / charsets.length)
+		const remainder = length % charsets.length
+
+		const passwordChars: string[] = []
+
+		charsets.forEach((charset, index) => {
+			const count = index < remainder ? charsPerSet + 1 : charsPerSet
+			for (let i = 0; i < count; i++) {
+				const randomIndex = Math.floor(Math.random() * charset.length)
+				passwordChars.push(charset.charAt(randomIndex))
+			}
+		})
+
+		for (let i = passwordChars.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1))
+			;[passwordChars[i], passwordChars[j]] = [passwordChars[j], passwordChars[i]]
 		}
 
-		setPassword(password.split(''))
+		setPassword(passwordChars)
 	}
 
 	const handleCopyPassword = () => {
