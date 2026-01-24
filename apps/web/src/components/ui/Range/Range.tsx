@@ -7,6 +7,7 @@ const Range = (props: RangeProps) => {
 	const { containerClassName, fillClassName, ...restTwo } = rest
 
 	const percent = getRangeValue(restTwo.value, restTwo.min, restTwo.max)
+	const left = `calc(${percent}% - ${(percent / 100) * 16}px)`
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value
@@ -26,7 +27,7 @@ const Range = (props: RangeProps) => {
 						'absolute w-4 h-4 aspect-square rounded-full bg-black',
 						thumbClassName
 					)}
-					style={{ left: `calc(${percent * (100 - 5)}%)` }}
+					style={{ left }}
 				/>
 				<div
 					className={twMerge(
@@ -35,8 +36,8 @@ const Range = (props: RangeProps) => {
 					)}
 				>
 					<div
-						className={twMerge('h-0.75 bg-black rounded-r-full', fillClassName)}
-						style={{ width: `calc(${percent * 100}%)` }}
+						className={twMerge('h-0.75 bg-black', fillClassName)}
+						style={{ width: `calc(${percent}%)` }}
 					/>
 				</div>
 			</div>

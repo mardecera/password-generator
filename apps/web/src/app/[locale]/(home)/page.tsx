@@ -21,9 +21,9 @@ const HomePage = async ({ params }: PageProps) => {
 
 	return (
 		<div className="flex flex-col gap-5 my-4 sm:my-7.5">
-			<div className="flex flex-wrap my-5 gap-5 lg:gap-20">
-				<div className="flex flex-col gap-4 sm:max-w-[50%]">
-					<h1 className="text-[40px] text-white font-light leading-[110%]">
+			<div className="flex flex-col flex-wrap gap-5 lg:gap-10">
+				<div className="flex flex-col gap-4">
+					<h1 className="text-[30px] sm:text-[40px] text-white font-light leading-[110%] sm:max-w-[70%]">
 						{t('title')}
 					</h1>
 					<div className="text-[20px] text-white font-light leading-[150%]">
