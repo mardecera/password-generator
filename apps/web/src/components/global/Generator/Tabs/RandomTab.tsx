@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
+import { useTranslations } from 'next-intl'
 
 import Button from '@/components/ui/Button/Button'
 import Switch from '@/components/ui/Switch/Switch'
@@ -7,11 +8,10 @@ import Range from '@/components/ui/Range/Range'
 import { copyToClipboard } from '@/utils/clipboard.utils'
 import { CONSTANTS } from '@/constants/constants'
 import Separator from '@/components/ui/Separator/Separator'
-import { useTranslations } from 'next-intl'
+import { getPassword } from './RandomTab.helpers'
 
-const { NUMBERS, SPECIAL_CHARS, UPPERCASE, LOWERCASE } = CONSTANTS
-const MIN_LENGTH = 7
-const MAX_LENGTH = 100
+const { NUMBERS, SPECIAL_CHARS } = CONSTANTS
+const { MIN_LENGTH, MAX_LENGTH } = CONSTANTS.RANGE
 
 const RandomTab = () => {
 	const t = useTranslations('home')
@@ -23,25 +23,12 @@ const RandomTab = () => {
 	const [copied, setCopied] = useState<boolean>(false)
 
 	const handleGeneratePassword = () => {
-		let password = ''
-		const numbers = withNumbers ? NUMBERS : ''
-		const specialChars = withSpecialChars ? SPECIAL_CHARS : ''
-		const uppercase = UPPERCASE
-		const lowercase = LOWERCASE
-		const charset = numbers + specialChars + uppercase + lowercase
-
-		for (let i = 0; i < length; i++) {
-			const randomIndex = Math.floor(Math.random() * charset.length)
-			password += charset.charAt(randomIndex)
-		}
-
+		const password = getPassword(length, withNumbers, withSpecialChars)
 		setPassword(password.split(''))
 	}
 
 	const handleCopyPassword = () => {
-		const formattedPassword = password.join('')
-		copyToClipboard(formattedPassword)
-
+		copyToClipboard(password.join(''))
 		setCopied(true)
 
 		const time = setTimeout(() => {
@@ -116,14 +103,25 @@ const RandomTab = () => {
 				</div>
 			</div>
 			<div className="flex gap-2 flex-wrap whitespace-nowrap">
-				<Button className="flex-1" onClick={handleCopyPassword}>
-					{copied
-						? t('generator.tabs.random.buttonCopied')
-						: t('generator.tabs.random.buttonCopy')}
+				<Button
+					className="flex-1 relative font-semibold"
+					onClick={handleCopyPassword}
+				>
+					<span className={twMerge(copied && 'opacity-0')}>
+						{t('generator.tabs.random.buttonCopy')}
+					</span>
+					<span
+						className={twMerge(
+							'absolute inset-0 items-center justify-center hidden',
+							copied && 'flex'
+						)}
+					>
+						{t('generator.tabs.random.buttonCopied')}
+					</span>
 				</Button>
 				<Button
 					variant="outline"
-					className="flex-1"
+					className="flex-1 font-semibold"
 					onClick={handleGeneratePassword}
 				>
 					{t('generator.tabs.random.buttonGenerate')}

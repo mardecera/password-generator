@@ -40,7 +40,14 @@ const Generator = (props: GeneratorProps) => {
 			)}
 		>
 			<div className="mb-5 font-medium text-[14px]">{t('generator.title')}</div>
-			<Tabs tabs={tabs} activeTab={tab} onTabClick={setTab}>
+			<Tabs
+				tabs={tabs}
+				activeTab={tab}
+				onTabClick={setTab}
+				tabStyles={{
+					buttonTabClassName: 'text-[14px]',
+				}}
+			>
 				<div className="font-medium text-[14px] pt-4 pb-3">
 					{t('generator.subtitle')}
 				</div>

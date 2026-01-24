@@ -3,4 +3,8 @@ export const CONSTANTS = {
 	SPECIAL_CHARS: '!@#$%^&*()_+-=',
 	UPPERCASE: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	LOWERCASE: 'abcdefghijklmnopqrstuvwxyz',
+	RANGE: {
+		MIN_LENGTH: 7,
+		MAX_LENGTH: 100,
+	},
 }
