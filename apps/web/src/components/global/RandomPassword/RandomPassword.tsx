@@ -27,8 +27,8 @@ const RandomPassword = () => {
 		setPassword(password.split(''))
 	}
 
-	const handleCopyPassword = () => {
-		copyToClipboard(password.join(''))
+	const handleCopyPassword = async () => {
+		await copyToClipboard(password.join(''))
 		setCopied(true)
 
 		const time = setTimeout(() => {

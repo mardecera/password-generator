@@ -15,7 +15,7 @@ const Tabs = (props: TabsProps) => {
 		<div className={twMerge(className)}>
 			<div
 				className={twMerge(
-					'flex flex-row flex-wrap bg-[#3031360d] p-2 rounded-sm',
+					'flex flex-col sm:flex-row flex-wrap bg-black p-2 rounded-[10px]',
 					tabsClassName
 				)}
 			>
@@ -23,8 +23,8 @@ const Tabs = (props: TabsProps) => {
 					<button
 						key={index}
 						className={twMerge(
-							'bg-transparent px-5 py-2 rounded-sm cursor-pointer flex-1 text-xs',
-							activeTab === tab.key && 'bg-white',
+							'bg-transparent px-5 py-2 rounded-md cursor-pointer flex-1 text-xs',
+							activeTab === tab.key ? 'bg-white' : 'text-white',
 							buttonTabClassName
 						)}
 						onClick={() => handleTabClick(tab.key)}

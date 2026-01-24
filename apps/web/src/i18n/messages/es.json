@@ -34,5 +34,12 @@
 		"title": "404",
 		"subtitle": "Página no encontrada",
 		"description": "Lo sentimos, la página que buscas no existe."
+	},
+	"legal": {
+		"privacyPolicy": "Política de privacidad",
+		"termsOfUse": "Términos de uso",
+		"cookiesPolicy": "Política de cookies",
+		"accessibility": "Accesibilidad",
+		"copyright": "© {year} <href>Jonathan Cervantes</href>. Todos los derechos reservados."
 	}
 }
