@@ -2,7 +2,7 @@ import { hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
-import Generator from '@/components/global/Generator/Generator'
+import Generator from '@/components/home/Generator/Generator'
 
 type PageProps = {
 	params: Promise<{ locale: string }>

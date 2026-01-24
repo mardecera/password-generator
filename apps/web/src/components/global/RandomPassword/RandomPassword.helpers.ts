@@ -32,8 +32,6 @@ export const getPassword = (
 		password += char
 	}
 
-	console.debug('[Generated password]', { numbersCount, specialCharsCount })
-
 	const hasNoNumbers = withNumbers && numbersCount === 0
 	const hasNoSpecialChars = withSpecialChars && specialCharsCount === 0
 	const hasSpecialChars = withSpecialChars && specialCharsCount !== 0

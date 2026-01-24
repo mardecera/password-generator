@@ -1,12 +1,12 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
-import Tabs from '../Tabs/Tabs'
-import { TabsProps } from '../Tabs/Tabs.types'
-import { GeneratorProps } from './Generator.types'
-import { twMerge } from 'tailwind-merge'
-import RandomTab from './Tabs/RandomTab'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { twMerge } from 'tailwind-merge'
+
+import { GeneratorProps } from './Generator.types'
+import { generatorTabs } from './Generator.helpers'
+import Tabs from '@/components/global/Tabs/Tabs'
 
 const Generator = (props: GeneratorProps) => {
 	const { className } = props
@@ -14,23 +14,7 @@ const Generator = (props: GeneratorProps) => {
 
 	const [tab, setTab] = useState('1')
 
-	const tabs: TabsProps['tabs'] = [
-		{
-			label: t('generator.tabs.random.title'),
-			content: <RandomTab />,
-			key: '1',
-		},
-		{
-			label: t('generator.tabs.memorable'),
-			content: 'Content 2',
-			key: '2',
-		},
-		{
-			label: t('generator.tabs.pin'),
-			content: 'Content 3',
-			key: '3',
-		},
-	]
+	const tabs = generatorTabs(t)
 
 	return (
 		<div

@@ -8,12 +8,12 @@ import Range from '@/components/ui/Range/Range'
 import { copyToClipboard } from '@/utils/clipboard.utils'
 import { CONSTANTS } from '@/constants/constants'
 import Separator from '@/components/ui/Separator/Separator'
-import { getPassword } from './RandomTab.helpers'
+import { getPassword } from './RandomPassword.helpers'
 
 const { NUMBERS, SPECIAL_CHARS } = CONSTANTS
 const { MIN_LENGTH, MAX_LENGTH } = CONSTANTS.RANGE
 
-const RandomTab = () => {
+const RandomPassword = () => {
 	const t = useTranslations('home')
 
 	const [password, setPassword] = useState<string[]>([])
@@ -131,4 +131,4 @@ const RandomTab = () => {
 	)
 }
 
-export default RandomTab
+export default RandomPassword
