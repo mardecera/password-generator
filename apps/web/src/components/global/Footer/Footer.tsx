@@ -7,7 +7,7 @@ import Separator from '@/components/ui/Separator/Separator'
 import LocaleSwitcher from '../LocaleSwitcher/LocaleSwitcher'
 import { getLegales } from './Footer.helpers'
 
-import GithubSVG from '../../../assets/svg/github.svg'
+import GithubSVG from 'public/svg/github.svg'
 
 const Footer = (props: FooterProps) => {
 	const { className } = props
