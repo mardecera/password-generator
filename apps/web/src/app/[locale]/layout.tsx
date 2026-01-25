@@ -34,11 +34,11 @@ const Layout = async ({ children, params }: LayoutProps) => {
 
 	return (
 		<html lang={locale}>
-			<body className="min-h-dvh flex flex-col bg-gray-900">
+			<body className="min-h-dvh flex flex-col bg-black">
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<div className="flex-1 flex flex-col">
 						<Header />
-						<main className="wrapper px-4 flex-1 bg-gray-950 rounded-b-xl">
+						<main className="wrapper px-4 flex-1 bg-black rounded-b-xl">
 							{children}
 						</main>
 						<Footer />

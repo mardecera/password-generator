@@ -29,7 +29,7 @@ const Generator = (props: GeneratorProps) => {
 				activeTab={tab}
 				onTabClick={setTab}
 				tabStyles={{
-					buttonTabClassName: 'text-[14px]',
+					buttonTabClassName: 'text-[14px] font-medium',
 				}}
 			>
 				<div className="font-medium text-[14px] pt-4 pb-3">

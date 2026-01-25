@@ -23,12 +23,9 @@ const HomePage = async ({ params }: PageProps) => {
 		<div className="flex flex-col gap-5 my-4 sm:my-7.5">
 			<div className="flex flex-col flex-wrap gap-5 lg:gap-10">
 				<div className="flex flex-col gap-4">
-					<h1 className="text-[30px] sm:text-[40px] text-white font-light leading-[110%] sm:max-w-[70%]">
+					<h1 className="text-[30px] sm:text-[40px] text-white font-normal leading-[110%] sm:max-w-[70%]">
 						{t('title')}
 					</h1>
-					<div className="text-[20px] text-white font-light leading-[150%]">
-						{t('subtitle')}
-					</div>
 				</div>
 				<Generator className="flex-1" />
 			</div>
