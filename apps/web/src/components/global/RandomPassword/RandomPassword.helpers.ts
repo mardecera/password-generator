@@ -1,5 +1,5 @@
 import { CONSTANTS } from '@/constants/constants'
-import { cryptoRandomInt } from '@/utils/generators.utils'
+import { cryptoRandomInt, shuffleString } from '@/utils/generators.utils'
 import { replaceCharAt } from '@/utils/string.utils'
 
 const { NUMBERS, SPECIAL_CHARS, UPPERCASE, LOWERCASE } = CONSTANTS
@@ -18,10 +18,11 @@ export const getPassword = (
 	const uppercase = UPPERCASE
 	const lowercase = LOWERCASE
 	const charset = numbers + specialChars + uppercase + lowercase
+	const shuffleCharset = shuffleString(charset)
 
 	for (let i = 0; i < length; i++) {
-		const randomIndex = cryptoRandomInt(0, charset.length - 1)
-		const char = charset.charAt(randomIndex)
+		const randomIndex = cryptoRandomInt(0, shuffleCharset.length - 1)
+		const char = shuffleCharset.charAt(randomIndex)
 
 		if (numbers.includes(char)) {
 			numbersCount++
