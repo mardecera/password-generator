@@ -8,6 +8,7 @@
 			"tabs": {
 				"random": {
 					"title": "Aleatoria",
+					"subtitle": "Personaliza tu nueva contraseña",
 					"length": "Longitud",
 					"numbers": "Números",
 					"specialChars": "Símbolos",
@@ -16,8 +17,28 @@
 					"buttonCopied": "Copiado!",
 					"buttonGenerate": "Refrescar contraseña"
 				},
-				"memorable": "Fácil de recordar",
-				"pin": "PIN"
+				"passport": {
+					"title": "Pasaporte",
+					"subtitle": "Personaliza tu nuevo pasaporte",
+					"result": "Pasaporte generado",
+					"buttonCopy": "Copiar pasaporte",
+					"buttonCopied": "Copiado!",
+					"buttonGenerate": "Refrescar pasaporte"
+				},
+				"memorable": {
+					"title": "Memorable",
+					"subtitle": "Personaliza tu nueva frase"
+				},
+				"pin": {
+					"title": "PIN",
+					"subtitle": "Personaliza tu nuevo PIN",
+					"length": "Longitud",
+					"numbers": "Números",
+					"result": "PIN generado",
+					"buttonCopy": "Copiar PIN",
+					"buttonCopied": "Copiado!",
+					"buttonGenerate": "Refrescar PIN"
+				}
 			}
 		}
 	},

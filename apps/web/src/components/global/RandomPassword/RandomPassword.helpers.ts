@@ -7,7 +7,9 @@ const { NUMBERS, SPECIAL_CHARS, UPPERCASE, LOWERCASE } = CONSTANTS
 export const getPassword = (
 	length: number,
 	withNumbers: boolean,
-	withSpecialChars: boolean
+	withSpecialChars: boolean,
+	withUppercase: boolean,
+	withLowercase: boolean
 ) => {
 	let password = ''
 	let numbersCount = 0
@@ -15,8 +17,8 @@ export const getPassword = (
 
 	const numbers = withNumbers ? NUMBERS : ''
 	const specialChars = withSpecialChars ? SPECIAL_CHARS : ''
-	const uppercase = UPPERCASE
-	const lowercase = LOWERCASE
+	const uppercase = withUppercase ? UPPERCASE : ''
+	const lowercase = withLowercase ? LOWERCASE : ''
 	const charset = numbers + specialChars + uppercase + lowercase
 	const shuffleCharset = shuffleString(charset)
 
