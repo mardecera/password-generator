@@ -8,6 +8,7 @@
 			"tabs": {
 				"random": {
 					"title": "Random",
+					"subtitle": "Customize your new password",
 					"length": "Length",
 					"numbers": "Numbers",
 					"specialChars": "Symbols",
@@ -16,8 +17,28 @@
 					"buttonCopied": "Copied",
 					"buttonGenerate": "Refresh password"
 				},
-				"memorable": "Memorable",
-				"pin": "PIN"
+				"passport": {
+					"title": "Passport",
+					"subtitle": "Customize your new passport",
+					"result": "Generated passport",
+					"buttonCopy": "Copy passport",
+					"buttonCopied": "Copied",
+					"buttonGenerate": "Refresh passport"
+				},
+				"memorable": {
+					"title": "Memorable",
+					"subtitle": "Customize your new phrase"
+				},
+				"pin": {
+					"title": "PIN",
+					"subtitle": "Customize your new PIN",
+					"length": "Length",
+					"numbers": "Numbers",
+					"result": "Generated PIN",
+					"buttonCopy": "Copy PIN",
+					"buttonCopied": "Copied",
+					"buttonGenerate": "Refresh PIN"
+				}
 			}
 		}
 	},

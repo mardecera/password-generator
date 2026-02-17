@@ -1,20 +1,23 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { twMerge } from 'tailwind-merge'
 
 import { GeneratorProps } from './Generator.types'
-import { generatorTabs } from './Generator.helpers'
+import { generatorTabs } from './Generator.factory'
 import Tabs from '@/components/global/Tabs/Tabs'
 
 const Generator = (props: GeneratorProps) => {
 	const { className } = props
 	const t = useTranslations('home')
 
-	const [tab, setTab] = useState('1')
+	const [tab, setTab] = useState('random')
 
-	const tabs = generatorTabs(t)
+	const tabs = useMemo(() => generatorTabs(t), [t])
+	const subTitle = useMemo(() => {
+		return tabs.find(({ key }) => key === tab)?.subLabel
+	}, [tab, tabs])
 
 	return (
 		<div
@@ -32,9 +35,7 @@ const Generator = (props: GeneratorProps) => {
 					buttonTabClassName: 'text-[14px] font-medium',
 				}}
 			>
-				<div className="font-medium text-[14px] pt-4 pb-3">
-					{t('generator.subtitle')}
-				</div>
+				<div className="font-medium text-[14px] pt-4 pb-3">{subTitle}</div>
 			</Tabs>
 		</div>
 	)

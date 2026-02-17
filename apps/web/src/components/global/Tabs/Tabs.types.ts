@@ -2,6 +2,7 @@ type Tab = {
 	label: React.ReactNode
 	content: React.ReactNode
 	key: string
+	subLabel?: React.ReactNode
 }
 
 type TabStyles = {

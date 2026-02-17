@@ -3,8 +3,22 @@ export const CONSTANTS = {
 	SPECIAL_CHARS: '!@#$%^&*()_+-=',
 	UPPERCASE: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	LOWERCASE: 'abcdefghijklmnopqrstuvwxyz',
-	RANGE: {
-		MIN_LENGTH: 7,
-		MAX_LENGTH: 100,
+	PASSWORD: {
+		RANGE: {
+			MIN_LENGTH: 7,
+			MAX_LENGTH: 100,
+		},
+	},
+	PIN: {
+		RANGE: {
+			MIN_LENGTH: 4,
+			MAX_LENGTH: 50,
+		},
+	},
+	PASSPORT: {
+		RANGE: {
+			MIN_LENGTH: 8,
+			MAX_LENGTH: 20,
+		},
 	},
 }

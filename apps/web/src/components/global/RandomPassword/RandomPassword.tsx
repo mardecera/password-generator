@@ -1,4 +1,4 @@
-import { useEffect, useEffectEvent, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useTranslations } from 'next-intl'
 
@@ -11,7 +11,7 @@ import Separator from '@/components/ui/Separator/Separator'
 import { getPassword } from './RandomPassword.helpers'
 
 const { NUMBERS, SPECIAL_CHARS } = CONSTANTS
-const { MIN_LENGTH, MAX_LENGTH } = CONSTANTS.RANGE
+const { MIN_LENGTH, MAX_LENGTH } = CONSTANTS.PASSWORD.RANGE
 
 const RandomPassword = () => {
 	const t = useTranslations('home')
@@ -22,25 +22,25 @@ const RandomPassword = () => {
 	const [withSpecialChars, setWithSpecialChars] = useState<boolean>(true)
 	const [copied, setCopied] = useState<boolean>(false)
 
-	const handleGeneratePassword = useEffectEvent(async () => {
-		const password = getPassword(length, withNumbers, withSpecialChars)
+	const handleGeneratePassword = () => {
+		const password = getPassword(
+			length,
+			withNumbers,
+			withSpecialChars,
+			true,
+			true
+		)
 		setPassword(password.split(''))
-	})
+	}
 
 	const handleCopyPassword = async () => {
 		await copyToClipboard(password.join(''))
 		setCopied(true)
 
-		const time = setTimeout(() => {
+		setTimeout(() => {
 			setCopied(false)
 		}, 1000)
-
-		return () => clearTimeout(time)
 	}
-
-	useEffect(() => {
-		handleGeneratePassword()
-	}, [])
 
 	useEffect(() => {
 		handleGeneratePassword()
