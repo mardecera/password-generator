@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useEffectEvent, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useTranslations } from 'next-intl'
 
@@ -22,10 +22,10 @@ const RandomPassword = () => {
 	const [withSpecialChars, setWithSpecialChars] = useState<boolean>(true)
 	const [copied, setCopied] = useState<boolean>(false)
 
-	const handleGeneratePassword = () => {
+	const handleGeneratePassword = useEffectEvent(async () => {
 		const password = getPassword(length, withNumbers, withSpecialChars)
 		setPassword(password.split(''))
-	}
+	})
 
 	const handleCopyPassword = async () => {
 		await copyToClipboard(password.join(''))
