@@ -9,8 +9,6 @@ import { copyToClipboard } from '@/utils/clipboard.utils'
 
 import { getRandomPIN } from './RandomPIN.helpers'
 
-import ShuffleSVG from 'public/svg/shuffle.svg'
-
 const { MIN_LENGTH, MAX_LENGTH } = CONSTANTS.PIN.RANGE
 
 const RandomPIN = () => {
@@ -46,7 +44,6 @@ const RandomPIN = () => {
 
 	return (
 		<div className="space-y-6">
-			<ShuffleSVG />
 			<div className="border border-gray-200 rounded-lg p-4 flex flex-col gap-3">
 				<div className="flex gap-6 items-center text-[14px]">
 					<div>{t('generator.tabs.random.length')}</div>
