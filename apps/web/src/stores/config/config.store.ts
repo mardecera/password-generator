@@ -1,6 +1,7 @@
 import { create } from 'zustand'
-import { ConfigActions, ConfigStore } from './config.types'
 import { createJSONStorage, persist } from 'zustand/middleware'
+
+import { ConfigActions, ConfigStore } from './config.types'
 
 const initialValues: ConfigStore = {
 	configRandomPass: undefined,

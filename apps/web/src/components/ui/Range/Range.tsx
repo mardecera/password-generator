@@ -1,6 +1,7 @@
 import { twMerge } from 'tailwind-merge'
-import { RangeProps } from './Range.types'
+
 import { getRangeValue } from './Range.helpers'
+import { RangeProps } from './Range.types'
 
 const Range = (props: RangeProps) => {
 	const { className, onChange, railClassName, thumbClassName, ...rest } = props

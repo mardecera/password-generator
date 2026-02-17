@@ -1,12 +1,15 @@
 import { useTranslations } from 'next-intl'
-import { useState, useEffectEvent, useEffect } from 'react'
+import { useEffect, useEffectEvent, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 import Button from '@/components/ui/Button/Button'
-import { copyToClipboard } from '@/utils/clipboard.utils'
-import { CONSTANTS } from '@/constants/constants'
 import Range from '@/components/ui/Range/Range'
+import { CONSTANTS } from '@/constants/constants'
+import { copyToClipboard } from '@/utils/clipboard.utils'
+
 import { getRandomPIN } from './RandomPIN.helpers'
+
+import ShuffleSVG from 'public/svg/shuffle.svg'
 
 const { MIN_LENGTH, MAX_LENGTH } = CONSTANTS.PIN.RANGE
 
@@ -43,6 +46,7 @@ const RandomPIN = () => {
 
 	return (
 		<div className="space-y-6">
+			<ShuffleSVG />
 			<div className="border border-gray-200 rounded-lg p-4 flex flex-col gap-3">
 				<div className="flex gap-6 items-center text-[14px]">
 					<div>{t('generator.tabs.random.length')}</div>

@@ -1,12 +1,13 @@
 'use client'
 
-import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { useMemo, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-import { GeneratorProps } from './Generator.types'
-import { generatorTabs } from './Generator.factory'
 import Tabs from '@/components/global/Tabs/Tabs'
+
+import { generatorTabs } from './Generator.factory'
+import { GeneratorProps } from './Generator.types'
 
 const Generator = (props: GeneratorProps) => {
 	const { className } = props

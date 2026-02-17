@@ -1,6 +1,7 @@
+import { StyleSheet, Text, View } from 'react-native'
+
 import ParallaxScrollView from '@/src/components/parallax-scroll-view'
 import { IconSymbol } from '@/src/components/ui/icon-symbol'
-import { View, Text, StyleSheet } from 'react-native'
 
 const UsersScreen = () => {
 	return (

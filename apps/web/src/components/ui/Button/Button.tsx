@@ -1,8 +1,9 @@
 'use client'
 
 import { twMerge } from 'tailwind-merge'
-import { ButtonProps } from './Button.types'
+
 import { states, variants } from './Button.helpers'
+import { ButtonProps } from './Button.types'
 
 const Button = (props: ButtonProps) => {
 	const { className, children, icon, iconPosition = 'left', ...rest } = props

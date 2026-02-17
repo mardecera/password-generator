@@ -1,14 +1,14 @@
+import RandomPassport from '@/components/global/RandomPassport/RandomPassport'
 import RandomPassword from '@/components/global/RandomPassword/RandomPassword'
 import RandomPIN from '@/components/global/RandomPIN/RandomPIN'
+import TabLabel from '@/components/global/Tabs/TabLabel/TabLabel'
 import { TabsProps } from '@/components/global/Tabs/Tabs.types'
 import { TFunction } from '@/types/i18n.types'
-import RandomPassport from '@/components/global/RandomPassport/RandomPassport'
-import TabLabel from '@/components/global/Tabs/TabLabel/TabLabel'
 
-import ShuffleSVG from 'public/svg/shuffle.svg'
 import HashSVG from 'public/svg/hash.svg'
 import IdeaSVG from 'public/svg/idea.svg'
 import PassportSVG from 'public/svg/passport.svg'
+import ShuffleSVG from 'public/svg/shuffle.svg'
 
 export const generatorTabs = (t: TFunction): TabsProps['tabs'] => {
 	return [

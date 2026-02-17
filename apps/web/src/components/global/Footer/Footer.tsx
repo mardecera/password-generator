@@ -1,11 +1,12 @@
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { twMerge } from 'tailwind-merge'
-import Link from 'next/link'
 
-import { FooterProps } from './Footer.types'
 import Separator from '@/components/ui/Separator/Separator'
-import LocaleSwitcher from '../LocaleSwitcher/LocaleSwitcher'
+
 import { getLegales } from './Footer.helpers'
+import { FooterProps } from './Footer.types'
+import LocaleSwitcher from '../LocaleSwitcher/LocaleSwitcher'
 
 import GithubSVG from 'public/svg/github.svg'
 
