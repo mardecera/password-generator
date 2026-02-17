@@ -1,10 +1,11 @@
 import js from '@eslint/js'
-import globals from 'globals'
-import tseslint from 'typescript-eslint'
-import pluginReact from 'eslint-plugin-react'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
 import { defineConfig } from 'eslint/config'
+import importPlugin from 'eslint-plugin-import'
+import pluginReact from 'eslint-plugin-react'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 export default defineConfig([
 	{
@@ -14,6 +15,44 @@ export default defineConfig([
 		languageOptions: { globals: { ...globals.browser, ...globals.node } },
 	},
 	tseslint.configs.recommended,
+	{
+		plugins: {
+			import: importPlugin,
+		},
+		rules: {
+			'import/order': [
+				'warn',
+				{
+					groups: [
+						'builtin',
+						'external',
+						'internal',
+						['parent', 'sibling', 'index'],
+						'type',
+						'object',
+					],
+					pathGroups: [
+						{
+							pattern: '@/**',
+							group: 'internal',
+							position: 'before',
+						},
+						{
+							pattern: 'public/**',
+							group: 'object',
+							position: 'after',
+						},
+					],
+					pathGroupsExcludedImportTypes: ['builtin'],
+					'newlines-between': 'always',
+					alphabetize: {
+						order: 'asc',
+						caseInsensitive: true,
+					},
+				},
+			],
+		},
+	},
 	{
 		files: ['**/*.json'],
 		plugins: { json },

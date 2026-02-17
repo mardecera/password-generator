@@ -3,6 +3,7 @@
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { twMerge } from 'tailwind-merge'
+
 import { SelectProps } from './Select.types'
 
 const Select = (props: SelectProps) => {

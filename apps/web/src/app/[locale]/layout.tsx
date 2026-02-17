@@ -1,11 +1,13 @@
-import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
-import { routing } from '@/i18n/routing'
+import { NextIntlClientProvider } from 'next-intl'
 import { hasLocale } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
-import '@/app/globals.css'
-import Header from '@/components/global/Header/Header'
+
 import Footer from '@/components/global/Footer/Footer'
+import Header from '@/components/global/Header/Header'
+import { routing } from '@/i18n/routing'
+
+import '@/app/globals.css'
 
 type LayoutProps = {
 	children: React.ReactNode

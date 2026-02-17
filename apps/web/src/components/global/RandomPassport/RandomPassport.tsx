@@ -1,11 +1,12 @@
 import { useTranslations } from 'next-intl'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 import Button from '@/components/ui/Button/Button'
 import Range from '@/components/ui/Range/Range'
 import { CONSTANTS } from '@/constants/constants'
 import { copyToClipboard } from '@/utils/clipboard.utils'
+
 import { getPassport } from './RandomPassport.helpers'
 
 const { MIN_LENGTH, MAX_LENGTH } = CONSTANTS.PASSPORT.RANGE

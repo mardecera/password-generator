@@ -1,5 +1,6 @@
-import { routing } from './i18n/routing'
 import { NextRequest, NextResponse } from 'next/server'
+
+import { routing } from './i18n/routing'
 import { hasLocalePrefix } from './utils/type-guards.utils'
 
 const PUBLIC_FILE = /\.[^/]+$/

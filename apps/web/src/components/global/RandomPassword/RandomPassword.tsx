@@ -1,13 +1,14 @@
+import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { useTranslations } from 'next-intl'
 
 import Button from '@/components/ui/Button/Button'
-import Switch from '@/components/ui/Switch/Switch'
 import Range from '@/components/ui/Range/Range'
-import { copyToClipboard } from '@/utils/clipboard.utils'
-import { CONSTANTS } from '@/constants/constants'
 import Separator from '@/components/ui/Separator/Separator'
+import Switch from '@/components/ui/Switch/Switch'
+import { CONSTANTS } from '@/constants/constants'
+import { copyToClipboard } from '@/utils/clipboard.utils'
+
 import { getPassword } from './RandomPassword.helpers'
 
 const { NUMBERS, SPECIAL_CHARS } = CONSTANTS

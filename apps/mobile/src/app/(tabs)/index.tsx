@@ -1,12 +1,12 @@
 import { Image } from 'expo-image'
+import { Link } from 'expo-router'
+import { useEffect, useState } from 'react'
 import { FlatList, Platform, StyleSheet } from 'react-native'
 
 import { HelloWave } from '@/src/components/hello-wave'
 import ParallaxScrollView from '@/src/components/parallax-scroll-view'
 import { ThemedText } from '@/src/components/themed-text'
 import { ThemedView } from '@/src/components/themed-view'
-import { Link } from 'expo-router'
-import { useEffect, useState } from 'react'
 
 const URL = 'https://api.thecatapi.com/v1/images/search?limit=10'
 

@@ -1,9 +1,10 @@
 'use client'
 
+import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
+
 import { states, variants } from './ButtonLink.helpers'
 import { ButtonLinkProps } from './ButtonLink.types'
-import Link from 'next/link'
 
 const ButtonLink = (props: ButtonLinkProps) => {
 	const { className, children, icon, iconPosition = 'left', ...rest } = props

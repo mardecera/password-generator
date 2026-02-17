@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
-import { TabsProps } from './Tabs.types'
+import { useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
+
+import { TabsProps } from './Tabs.types'
 
 const Tabs = (props: TabsProps) => {
 	const { tabs, className, tabStyles, ...rest } = props

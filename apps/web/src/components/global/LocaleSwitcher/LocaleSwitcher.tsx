@@ -1,14 +1,16 @@
 'use client'
 
-import { twMerge } from 'tailwind-merge'
-import { LocaleSwitcherProps } from './LocaleSwitcher.types'
-import { useParams, usePathname } from 'next/navigation'
-import { routing } from '@/i18n/routing'
-import Link from 'next/link'
-import { useMemo } from 'react'
-import Select from '@/components/ui/Select/Select'
-import { Locale } from 'next-intl'
 import { getLocaleLabel } from '@passfe/utils'
+import Link from 'next/link'
+import { useParams, usePathname } from 'next/navigation'
+import { Locale } from 'next-intl'
+import { useMemo } from 'react'
+import { twMerge } from 'tailwind-merge'
+
+import Select from '@/components/ui/Select/Select'
+import { routing } from '@/i18n/routing'
+
+import { LocaleSwitcherProps } from './LocaleSwitcher.types'
 
 const LocaleSwitcher = (props: LocaleSwitcherProps) => {
 	const { className } = props
